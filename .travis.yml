@@ -18,4 +18,4 @@ before_install:
 - julia --color=yes --project=. -e 'using Pkg; Pkg.add("Jive")'
 
 script:
-- julia --color=yes --project=. -p2 test/runtests.jl
+- julia --color=yes --project=./test -p2 test/runtests.jl
