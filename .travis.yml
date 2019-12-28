@@ -14,9 +14,10 @@ before_install:
 - julia --color=yes --project=. -e 'using Pkg; pkg"dev https://github.com/Juice-jl/LogicCircuits.jl"'
 - julia --color=yes --project=. -e 'using Pkg; pkg"dev https://github.com/Juice-jl/ProbabilisticCircuits.jl"'
 - julia --color=yes --project=. -e 'using Pkg; pkg"dev Jive"'
-- julia --color=yes --project=. -e 'using Pkg; pkg"add DataStructures"'
 - julia --color=yes --project=. -e 'using Pkg; pkg"precompile"'
 
 script:
--              julia --color=yes --project=. -p2 test/runtests.jl
 - JIVE_PROCS=2 julia --color=yes --project=. -e 'using Pkg; Pkg.test()'
+
+- julia --color=yes --project=. -e 'using Pkg; pkg"add DataStructures LightGraphs"'
+-              julia --color=yes --project=. -p2 test/runtests.jl
