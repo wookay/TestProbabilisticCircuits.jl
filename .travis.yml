@@ -15,4 +15,4 @@ before_install:
 - julia -e 'using Pkg; Pkg.activate("."); Pkg.add(PackageSpec(url="https://github.com/Juice-jl/ProbabilisticCircuits.jl"))'
 
 script:
-- JIVE_PROCS=2 julia --project=. --color=yes -e 'using Pkg; Pkg.test()'
+- JIVE_PROCS=2 julia --project=. --color=yes -e 'using Pkg; Pkg.instantiate(); Pkg.test()'
