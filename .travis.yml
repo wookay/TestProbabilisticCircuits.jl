@@ -13,8 +13,8 @@ julia:
 before_install:
 - julia --color=yes -e 'using Pkg; pkg"dev https://github.com/Juice-jl/LogicCircuits.jl"; pkg"dev https://github.com/Juice-jl/ProbabilisticCircuits.jl"'
 - julia --color=yes --project=./test -e 'using Pkg; "dev ."'
+- julia --color=yes --project=./test -e 'using Pkg; Pkg.activate(); Pkg.instantiate(); Pkg.precompile()'
 - julia --color=yes --project=. -e 'using Pkg; Pkg.add("Jive")'
-- julia --color=yes --project=. -e 'using Pkg; Pkg.activate(); Pkg.instantiate(); Pkg.precompile()'
 
 script:
 - julia --color=yes --project=. -p2 test/runtests.jl
