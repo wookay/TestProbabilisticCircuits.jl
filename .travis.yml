@@ -19,5 +19,5 @@ before_install:
 script:
 - JIVE_PROCS=2 julia --color=yes --project=. -e 'using Pkg; Pkg.test()'
 
-- julia --color=yes --project=. -e 'using Pkg; pkg"add DataStructures LightGraphs MetaGraphs"'
+-              julia --color=yes --project=. -e 'using Pkg; pkg"add DataStructures LightGraphs MetaGraphs"'
 -              julia --color=yes --project=. -p2 test/runtests.jl
