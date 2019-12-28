@@ -1,0 +1,4 @@
+name = "TestProbabilisticCircuits"
+uuid = "ba015fcd-aa77-44a7-86e5-451502acf88e"
+authors = ["WooKyoung Noh <wookay.noh@gmail.com>"]
+version = "0.1.0"
