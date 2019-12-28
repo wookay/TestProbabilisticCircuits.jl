@@ -2,3 +2,6 @@ name = "TestProbabilisticCircuits"
 uuid = "ba015fcd-aa77-44a7-86e5-451502acf88e"
 authors = ["WooKyoung Noh <wookay.noh@gmail.com>"]
 version = "0.1.0"
+
+[deps]
+LogicCircuits = "a7847b3b-b7f1-4dd5-83c3-60e0aa0f8599"
